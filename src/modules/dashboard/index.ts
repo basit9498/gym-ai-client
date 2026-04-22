@@ -1,0 +1,12 @@
+export { default as DashboardSidebar } from './components/Sidebar';
+export { default as DashboardTopbar } from './components/Topbar';
+export { default as StatCard } from './components/StatCard';
+export * from './data/dashboard-mocks';
+export { topbarNotifications } from './data/topbar-notifications';
+export * from './overview';
+export * from './workout';
+export * from './ai-coach';
+export * from './meal-tracker';
+export * from './progress';
+export * from './wallet';
+export * from './settings';

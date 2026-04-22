@@ -1,0 +1,14 @@
+export { default as Navbar } from './components/Navbar';
+export { default as HeroSection } from './components/HeroSection';
+export { default as TrustedBy } from './components/TrustedBy';
+export { default as FeaturesSection } from './components/FeaturesSection';
+export { default as InteractiveDemo } from './components/InteractiveDemo';
+export { default as HowItWorks } from './components/HowItWorks';
+export { default as ProgressSection } from './components/ProgressSection';
+export { default as Testimonials } from './components/Testimonials';
+export { default as PricingSection } from './components/PricingSection';
+export { default as FAQSection } from './components/FAQSection';
+export { default as FinalCTA } from './components/FinalCTA';
+export { default as Footer } from './components/Footer';
+export { default as ParticlesBackground } from './components/ParticlesBackground';
+export { default as CursorGlow } from './components/CursorGlow';

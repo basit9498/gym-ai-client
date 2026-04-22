@@ -1,6 +1,6 @@
 import { ProgressData } from '../types';
 
-const API_URL = 'http://localhost:5001/api/general';
+const API_URL = `${process.env.NEXT_PUBLIC_API_URL}/general`;
 
 const getHeaders = () => {
   if (typeof window === 'undefined') return {};

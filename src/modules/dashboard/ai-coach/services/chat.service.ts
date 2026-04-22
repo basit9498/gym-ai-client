@@ -1,6 +1,6 @@
 import { ChatThread, ChatMessage } from '../types';
 
-const API_URL = 'http://localhost:5001/api/chat';
+const API_URL = `${process.env.NEXT_PUBLIC_API_URL}/chat`;
 
 const getHeaders = () => {
   if (typeof window === 'undefined') return {};

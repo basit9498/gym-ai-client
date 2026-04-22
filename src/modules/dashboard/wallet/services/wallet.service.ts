@@ -1,6 +1,6 @@
 import { WalletDetail } from '../types';
 
-const API_URL = 'http://localhost:5001/api/wallet';
+const API_URL = `${process.env.NEXT_PUBLIC_API_URL}/wallet`;
 
 const getHeaders = () => {
   if (typeof window === 'undefined') return {};

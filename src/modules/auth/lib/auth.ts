@@ -22,7 +22,7 @@ interface WalletSettingsResult {
   data: any;
   error?: string;
 }
-const API_URL = 'http://localhost:5001/api/auth';
+const API_URL = `${process.env.NEXT_PUBLIC_API_URL}/auth`;
 
 export async function login(email: string, password: string): Promise<AuthResult> {
   try {
@@ -91,7 +91,7 @@ export async function register(name: string, email: string, password: string, wa
 
 export async function getWalletSettings(): Promise<WalletSettingsResult> {
   try {
-    const res = await fetch(`http://localhost:5001/api/general/wallet-settings`);
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/general/wallet-settings`);
     const data = await res.json();
     return { success: true, data: data.data };
   } catch (error: any) {

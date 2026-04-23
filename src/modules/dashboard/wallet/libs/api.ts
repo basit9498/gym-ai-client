@@ -6,14 +6,25 @@ interface WalletDetailResult {
   error: string;
 }
 
-const getHeaders = () => {
-  const session = localStorage.getItem('agentic_session');
-  const token = session ? JSON.parse(session).token : '';
-  return {
+const getHeaders = (): Record<string, string> => {
+  const headers: Record<string, string> = {
     'Content-Type': 'application/json',
-    'Authorization': `Bearer ${token}`
   };
-}
+  
+  if (typeof window !== 'undefined') {
+    const session = localStorage.getItem('agentic_session');
+    if (session) {
+      try {
+        const token = JSON.parse(session).token;
+        if (token) {
+          headers['Authorization'] = `Bearer ${token}`;
+        }
+      } catch (e) {}
+    }
+  }
+  
+  return headers;
+};
 export async function getWalletDetail(): Promise<WalletDetailResult> {
   try {
     const res = await fetch(`${API_URL}`, {

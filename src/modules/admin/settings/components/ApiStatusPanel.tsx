@@ -8,10 +8,10 @@ interface ApiStatusPanelProps {
   services: ApiService[];
 }
 
-const STATUS_STYLES: Record<string, { color: string; bg: string; label: string }> = {
-  operational: { color: '#00ff80', bg: 'rgba(0,255,128,0.1)', label: 'Operational' },
-  degraded: { color: '#ffb800', bg: 'rgba(255,184,0,0.1)', label: 'Degraded' },
-  down: { color: '#f87171', bg: 'rgba(239,68,68,0.1)', label: 'Down' },
+const STATUS_STYLES: Record<string, { color: string; background: string; label: string }> = {
+  operational: { color: '#00ff80', background: 'rgba(0,255,128,0.1)', label: 'Operational' },
+  degraded: { color: '#ffb800', background: 'rgba(255,184,0,0.1)', label: 'Degraded' },
+  down: { color: '#f87171', background: 'rgba(239,68,68,0.1)', label: 'Down' },
 };
 
 export function ApiStatusPanel({ services }: ApiStatusPanelProps) {
@@ -41,7 +41,7 @@ export function ApiStatusPanel({ services }: ApiStatusPanelProps) {
               <div className="w-2 h-2 rounded-full flex-shrink-0" style={{ background: st.color, boxShadow: `0 0 6px ${st.color}80` }} />
               <p className="text-sm text-white/80 flex-1">{svc.name}</p>
               <span className="text-xs px-2 py-0.5 rounded-full flex-shrink-0"
-                style={{ background: st.bg, color: st.color }}>{st.label}</span>
+                style={{ background: st.background, color: st.color }}>{st.label}</span>
               <span className="text-xs text-white/30 w-12 text-right">{svc.latency}</span>
               <span className="text-xs text-white/20 w-14 text-right hidden sm:block">{svc.uptime}</span>
             </motion.div>

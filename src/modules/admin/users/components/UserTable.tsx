@@ -4,9 +4,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Loader2, MoreVertical } from 'lucide-react';
 import { User } from '../types';
 
-const ROLE_COLORS: Record<string, { bg: string; text: string }> = {
-  admin: { bg: 'rgba(155,89,255,0.12)', text: '#9b59ff' },
-  user: { bg: 'rgba(0,212,255,0.08)', text: '#00d4ff' },
+const ROLE_COLORS: Record<string, { background: string; color: string }> = {
+  admin: { background: 'rgba(155,89,255,0.12)', color: '#9b59ff' },
+  user: { background: 'rgba(0,212,255,0.08)', color: '#00d4ff' },
 };
 
 interface UserTableProps {

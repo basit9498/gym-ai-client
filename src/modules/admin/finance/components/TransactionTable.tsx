@@ -4,17 +4,17 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Loader2, ArrowUpRight, ArrowDownRight, BarChart3 } from 'lucide-react';
 import { Transaction } from '../types';
 
-const TYPE_COLORS: Record<string, { bg: string; text: string }> = {
-  deposit: { bg: 'rgba(0,212,255,0.08)', text: '#00d4ff' },
-  transfer: { bg: 'rgba(155,89,255,0.12)', text: '#9b59ff' },
-  payment: { bg: 'rgba(0,255,128,0.08)', text: '#00ff80' },
-  withdrawal: { bg: 'rgba(239,68,68,0.1)', text: '#f87171' },
+const TYPE_COLORS: Record<string, { background: string; color: string }> = {
+  deposit: { background: 'rgba(0,212,255,0.08)', color: '#00d4ff' },
+  transfer: { background: 'rgba(155,89,255,0.12)', color: '#9b59ff' },
+  payment: { background: 'rgba(0,255,128,0.08)', color: '#00ff80' },
+  withdrawal: { background: 'rgba(239,68,68,0.1)', color: '#f87171' },
 };
 
-const STATUS_COLORS: Record<string, { bg: string; text: string }> = {
-  completed: { bg: 'rgba(0,255,128,0.1)', text: '#00ff80' },
-  pending: { bg: 'rgba(255,184,0,0.1)', text: '#ffb800' },
-  failed: { bg: 'rgba(239,68,68,0.1)', text: '#f87171' },
+const STATUS_COLORS: Record<string, { background: string; color: string }> = {
+  completed: { background: 'rgba(0,255,128,0.1)', color: '#00ff80' },
+  pending: { background: 'rgba(255,184,0,0.1)', color: '#ffb800' },
+  failed: { background: 'rgba(239,68,68,0.1)', color: '#f87171' },
 };
 
 interface TransactionTableProps {
@@ -82,7 +82,7 @@ export function TransactionTable({ transactions, loading }: TransactionTableProp
 
                     <div className="col-span-2">
                        <span className="text-[9px] font-black px-2 py-0.5 rounded-md uppercase tracking-widest border"
-                         style={TYPE_COLORS[tx.type] || { bg: 'rgba(255,255,255,0.05)', text: '#fff' }}>
+                         style={TYPE_COLORS[tx.type] || { background: 'rgba(255,255,255,0.05)', color: '#fff' }}>
                          {tx.type}
                        </span>
                     </div>
@@ -94,7 +94,7 @@ export function TransactionTable({ transactions, loading }: TransactionTableProp
                     <div className="col-span-3 flex items-center gap-4">
                        <div className="flex flex-col">
                           <span className="text-[9px] font-black uppercase tracking-widest"
-                            style={{ color: STATUS_COLORS[tx.status]?.text }}>{tx.status}</span>
+                            style={{ color: STATUS_COLORS[tx.status]?.color }}>{tx.status}</span>
                           <span className="text-[10px] text-white/20 font-medium">
                             {new Date(tx.createdAt).toLocaleDateString(undefined, { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' })}
                           </span>

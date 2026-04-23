@@ -1,6 +1,6 @@
 'use client';
 
-import { motion, useMotionValue, useTransform, useSpring } from 'framer-motion';
+import { motion, useMotionValue, useTransform, useSpring, Variants } from 'framer-motion';
 import { useRef, useEffect, useState } from 'react';
 import { Activity, Brain, ChevronRight, Play } from 'lucide-react';
 
@@ -225,11 +225,11 @@ export default function HeroSection() {
     return () => window.removeEventListener('mousemove', handleMouse);
   }, [mouseX, mouseY]);
 
-  const container = {
+  const container: Variants = {
     hidden: {},
     show: { transition: { staggerChildren: 0.12, delayChildren: 0.2 } },
   };
-  const item = {
+  const item: Variants = {
     hidden: { opacity: 0, y: 30 },
     show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } },
   };

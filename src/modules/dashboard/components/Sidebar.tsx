@@ -38,7 +38,7 @@ export default function DashboardSidebar() {
         </div>
         {!collapsed && (
           <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="font-bold text-white">
-            Agentic<span className="gradient-text-blue">AI</span>
+            BodyForge<span className="gradient-text-blue">AI</span>
           </motion.span>
         )}
       </div>

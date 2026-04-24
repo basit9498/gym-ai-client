@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🏋️ Gym Arc Circle
 
-## Getting Started
+**Gym Arc Circle** is a premium, AI-powered fitness platform designed to revolutionize your wellness journey. It combines state-of-the-art AI coaching with secure, transparent usage-based payments powered by Circle.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🔗 Repository Links
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+| Component | Repository Link |
+| :--- | :--- |
+| **Frontend** | [basit9498/gym-ai-client](https://github.com/basit9498/gym-ai-client) |
+| **Backend** | [basit9498/gym-ai-sever](https://github.com/basit9498/gym-ai-sever) |
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ✨ Key Features
 
-## Learn More
+- 🤖 **AI Coach**: Interactive AI-driven guidance for your workouts and nutrition.
+- 📋 **Personalized Workout Plans**: Custom-tailored routines based on your fitness goals.
+- 🥗 **Smart Meal Tracking**: Effortlessly track your nutrition and get AI-generated meal plans.
+- 📈 **Progress Analytics**: Beautifully visualized data tracking your fitness evolution.
+- 💳 **Wallet & Payments**: Pay-as-you-go model using USDC via Circle integration.
+- 🌓 **Premium Aesthetic**: Modern, responsive design with smooth animations and dark mode support.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠️ Technology Stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Frontend
+- **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
+- **Styling**: [Tailwind CSS 4](https://tailwindcss.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **State Management**: React Hooks & Context API
 
-## Deploy on Vercel
+### Backend (Server)
+- **Runtime**: Node.js / Express
+- **Database**: MongoDB with Mongoose
+- **AI Integration**: Groq LLM / OpenAI-compatible APIs
+- **Blockchain/Payments**: Circle SDK (Programmable Wallets & USDC)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js 18.x or later
+- npm / yarn / pnpm
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/basit9498/gym-ai-client.git
+   cd gym-ai-client
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Configure Environment Variables**
+   Create a `.env.local` file in the root directory and add the necessary variables:
+   ```env
+   NEXT_PUBLIC_API_URL=http://localhost:5001/api
+   ```
+
+4. **Run the development server**
+   ```bash
+   npm run dev
+   ```
+
+5. **Open the application**
+   Navigate to [http://localhost:3000](http://localhost:3000) to see the app in action.
+
+---
+
+## 🧪 Deployment
+
+This project is optimized for deployment on **Vercel**. Connect your GitHub repository to Vercel for automatic CI/CD.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+Developed with ❤️ for the Gym AI community.
